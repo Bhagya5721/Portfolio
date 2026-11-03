@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Modern Software Engineer Portfolio
 
-## Getting Started
+A sleek, dark-themed developer portfolio engineered with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
-First, run the development server:
+---
 
+## ✨ Features
+
+- **🎨 Modern Dark Mode Design**: Glassmorphism, smooth micro-interactions, animated gradient glows, and refined typography.
+- **⚡ Single-Source-of-Truth Data**: All your details (bio, projects, tech skills, work experience, social links) live in [`src/data/portfolioData.ts`](file:///C:/Users/bhagy/.gemini/antigravity/scratch/portfolio/src/data/portfolioData.ts) for effortless editing.
+- **💻 Interactive Terminal**: A functional in-browser terminal widget on the About section where visitors can run commands (`whoami`, `skills`, `status`, `contact`, `clear`).
+- **📂 Filterable Projects Showcase**: Categorized cards with live demo links, repository badges, and expandable architecture breakdowns.
+- **🛠️ Interactive Tech Stack**: Filter skills by domain (Frontend, Backend & Cloud, Architecture & DevOps) with proficiency tags.
+- **📈 Quantified Experience Timeline**: Timeline displaying measurable engineering impact (latency cuts, throughput, leadership).
+- **📬 Contact & 1-Click Copy**: Glassmorphic contact form and direct email clipboard copy with visual feedback.
+- **📱 Fully Responsive**: Flawless experience across mobile, tablet, and widescreen displays.
+
+---
+
+## 🛠️ Quick Start
+
+### 1. Run Development Server
 ```bash
+cd "C:\Users\bhagy\.gemini\antigravity\scratch\portfolio"
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### 2. Build for Production
+```bash
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✏️ How to Customize with Your Information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All content is centralized in **`src/data/portfolioData.ts`**:
 
-## Learn More
+1. **Personal Details & Social Links**:
+   - Update `personal.name`, `role`, `bio`, `email`, `github`, `linkedin`, and `resumeUrl`.
+2. **Projects**:
+   - Add or modify items in `projects: []` with your own project titles, tags, live URLs, GitHub repositories, and impact metrics.
+3. **Skills**:
+   - Customize `skillCategories` to match your exact languages, frameworks, databases, and DevOps tools.
+4. **Experience**:
+   - Edit `experiences` to showcase your previous roles, accomplishments, and stack.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Deploy to Vercel (1-Click)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy this portfolio is using [Vercel](https://vercel.com):
+1. Push this folder to a GitHub repository.
+2. Import the repository into Vercel.
+3. Vercel automatically detects Next.js and deploys your portfolio with global edge caching and free SSL!
