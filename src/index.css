@@ -63,3 +63,35 @@
   transition: none !important;
   scroll-behavior: auto !important;
 }
+
+@theme {
+  /* Accent: blue and sky become warm brown/caramel */
+  --color-blue-50: #fdf8f3;
+  --color-blue-100: #f7ebdd;
+  --color-blue-200: #ecd5b9;
+  --color-blue-300: #dfb88f;
+  --color-blue-400: #cf9765;
+  --color-blue-500: #b5733e;
+  --color-blue-600: #9a5b2d;
+  --color-blue-700: #7c4624;
+  --color-blue-800: #5f351e;
+  --color-blue-900: #432617;
+  --color-blue-950: #2a1710;
+
+  --color-sky-300: #dfb88f;
+  --color-sky-400: #cf9765;
+  --color-sky-500: #b5733e;
+
+  /* Neutrals: slate becomes warm cream (light) and dark espresso (dark) */
+  --color-slate-50: #faf7f4;
+  --color-slate-100: #f3ede6;
+  --color-slate-200: #e6dccf;
+  --color-slate-300: #d2c3b1;
+  --color-slate-400: #a8967f;
+  --color-slate-500: #857360;
+  --color-slate-600: #66574a;
+  --color-slate-700: #4a3f36;
+  --color-slate-800: #342c26;
+  --color-slate-900: #221d19;
+  --color-slate-950: #171310;
+}
