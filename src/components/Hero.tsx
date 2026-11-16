@@ -2,7 +2,7 @@
 
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
-import { ArrowRight, Download, Terminal, Sparkles, Layers, Cpu } from "lucide-react";
+import { ArrowRight, Download, Terminal, Sparkles, Layers, Cpu, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -22,75 +22,75 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden"
+      className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden"
     >
-      {/* Background Gradients & Ambient Glow */}
+      {/* Handcrafted Architectural Grid & Subtle Vignette (No AI rainbow neon blobs) */}
       <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-indigo-500/15 rounded-full blur-[130px]" />
-        <div className="absolute top-1/3 left-1/4 -translate-y-1/2 w-[350px] h-[350px] bg-cyan-500/10 rounded-full blur-[110px]" />
-        <div className="absolute top-1/2 right-1/4 w-[400px] h-[350px] bg-purple-500/10 rounded-full blur-[120px]" />
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f29370a_1px,transparent_1px),linear-gradient(to_bottom,#1f29370a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-sky-500/[0.04] rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b14_1px,transparent_1px),linear-gradient(to_bottom,#1e293b14_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_75%_55%_at_50%_35%,#000_70%,transparent_100%)]" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        {/* Status Pill */}
+        {/* Status Badge */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-500/30 text-indigo-300 text-xs font-medium mb-8 backdrop-blur-md shadow-sm shadow-indigo-500/10 hover:border-indigo-500/50 transition-colors"
+          transition={{ duration: 0.4 }}
+          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-slate-300 text-xs font-medium mb-8 shadow-sm hover:border-slate-600 transition-colors"
         >
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
           </span>
-          <span>{personal.statusText}</span>
-          <span className="text-gray-500">•</span>
-          <span className="text-gray-400">{personal.location}</span>
+          <span className="text-slate-200">{personal.statusText}</span>
+          <span className="text-slate-600">•</span>
+          <span className="text-sky-400 font-medium flex items-center gap-1">
+            <MapPin className="w-3 h-3" />
+            {personal.location}
+          </span>
         </motion.div>
 
         {/* Main Title */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl leading-[1.1] mb-6"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white max-w-4xl leading-[1.12] mb-6"
         >
           Designing scalable web apps &{" "}
-          <span className="text-gradient">AI semantic systems</span>
+          <span className="text-gradient-steel">intelligent data systems</span>
         </motion.h1>
 
         {/* Subtitle / Bio summary */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl font-normal leading-relaxed mb-10"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl font-normal leading-relaxed mb-10"
         >
           Hi, I&apos;m <span className="text-white font-medium">{personal.name}</span> — a{" "}
-          <span className="text-gray-200">{personal.role}</span>. I develop full-stack
-          web applications with clean object-oriented Python, robust REST APIs, MySQL databases, and modern interactive frontends.
+          <span className="text-slate-200">{personal.role}</span>. I build end-to-end
+          applications with clean object-oriented Python, robust REST APIs, MySQL databases, and modern interactive frontends.
         </motion.p>
 
         {/* Action Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-wrap items-center justify-center gap-4 mb-14"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex flex-wrap items-center justify-center gap-3.5 mb-14"
         >
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 hover:shadow-indigo-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm shadow-sm hover:shadow-sky-500/20 transition-all hover:-translate-y-0.5 active:translate-y-0"
           >
             Explore Projects
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-slate-950" />
           </a>
 
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-gray-200 hover:text-white font-semibold text-sm border border-white/10 hover:border-white/20 transition-all hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-md"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-medium text-sm border border-slate-700/80 hover:border-slate-600 transition-all hover:-translate-y-0.5 active:translate-y-0"
           >
             Get In Touch
           </a>
@@ -99,9 +99,9 @@ export default function Hero() {
             href={personal.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-white text-sm font-semibold border border-white/10 hover:border-indigo-500/40 transition-all hover:-translate-y-0.5 active:translate-y-0 shadow-md backdrop-blur-md"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white text-sm font-medium border border-slate-700/80 hover:border-slate-600 transition-all hover:-translate-y-0.5 active:translate-y-0"
           >
-            <Download className="w-4 h-4 text-indigo-400" />
+            <Download className="w-4 h-4 text-sky-400" />
             View Resume PDF
           </a>
         </motion.div>
@@ -110,17 +110,17 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="w-full max-w-3xl mb-16"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="w-full max-w-3xl mb-14"
         >
-          <div className="text-xs uppercase tracking-widest text-gray-500 font-mono mb-3">
+          <div className="text-[11px] uppercase tracking-widest text-slate-500 font-mono mb-3">
             Core Technology Stack
           </div>
           <div className="flex flex-wrap justify-center gap-2">
             {techBadges.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 rounded-lg text-xs font-medium text-gray-300 bg-gray-900/80 border border-gray-800 hover:border-indigo-500/40 hover:text-indigo-300 transition-colors cursor-default"
+                className="px-3 py-1 rounded-lg text-xs font-mono font-medium text-slate-300 bg-slate-900/80 border border-slate-800 hover:border-sky-500/40 hover:text-sky-300 transition-colors cursor-default"
               >
                 {tech}
               </span>
@@ -130,20 +130,20 @@ export default function Hero() {
 
         {/* Stats Strip */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl"
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-3.5 w-full max-w-4xl"
         >
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="p-4 rounded-2xl bg-gray-900/50 border border-white/[0.07] backdrop-blur-sm hover:border-indigo-500/30 transition-colors"
+              className="p-4 rounded-xl bg-[#0d1322] border border-slate-800/80 hover:border-slate-700 transition-colors text-center"
             >
-              <div className="text-2xl sm:text-3xl font-bold text-white font-mono tracking-tight text-gradient-cyan">
+              <div className="text-2xl sm:text-3xl font-bold text-white font-mono tracking-tight">
                 {stat.value}
               </div>
-              <div className="text-xs text-gray-400 mt-1 font-medium">{stat.label}</div>
+              <div className="text-xs text-slate-400 mt-1 font-medium">{stat.label}</div>
             </div>
           ))}
         </motion.div>
