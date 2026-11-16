@@ -14,30 +14,30 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-slate-800/80 bg-[#060910] py-10 text-xs text-slate-500">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <footer className="border-t border-stone-200 bg-white py-8 text-xs text-stone-500">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Left: Branding & Copyright */}
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-          <span className="font-semibold text-slate-300">
-            © {currentYear} {personal.name}.
+        <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
+          <span className="font-semibold text-stone-900">
+            © {currentYear} {personal.name}
           </span>
-          <span className="hidden sm:inline text-slate-700">•</span>
-          <span className="text-slate-500">All rights reserved.</span>
+          <span className="hidden sm:inline text-stone-300">•</span>
+          <span className="text-stone-500">Python Full Stack Developer</span>
         </div>
 
-        {/* Center: Tech Stack note */}
-        <div className="flex items-center gap-1.5 text-slate-400 font-mono text-[11px]">
-          <span>Python Full Stack Engineer Portfolio</span>
+        {/* Center: Note */}
+        <div className="text-stone-400 font-mono text-[11px]">
+          Bangalore, India
         </div>
 
         {/* Right: Social & Back to Top */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2">
           <a
             href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-colors"
+            className="p-1.5 rounded-lg bg-stone-50 hover:bg-stone-100 border border-stone-200 text-stone-600 hover:text-stone-900 transition-colors"
           >
             <GithubIcon className="w-3.5 h-3.5" />
           </a>
@@ -46,14 +46,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-colors"
+            className="p-1.5 rounded-lg bg-stone-50 hover:bg-stone-100 border border-stone-200 text-stone-600 hover:text-stone-900 transition-colors"
           >
             <LinkedinIcon className="w-3.5 h-3.5" />
           </a>
           <button
             onClick={scrollToTop}
             aria-label="Back to top"
-            className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-sky-400 hover:text-sky-300 transition-colors flex items-center border border-slate-800 hover:border-slate-700"
+            className="p-1.5 rounded-lg bg-stone-50 hover:bg-stone-100 text-stone-600 hover:text-stone-900 transition-colors border border-stone-200"
           >
             <ArrowUp className="w-3.5 h-3.5" />
           </button>

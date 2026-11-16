@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Bhagya Udapudi | Python Full Stack Developer",
+  title: "Bhagya Udapudi — Python Full Stack Developer",
   description:
     "Portfolio of Bhagya Udapudi — Python Full Stack Developer specializing in FastAPI, Django, React 18, SQL/MySQL, and AI Vector Search pipelines.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "MySQL",
     "FAISS",
     "Sentence-Transformers",
-    "Vijayapura",
+    "Bangalore",
   ],
   authors: [{ name: "Bhagya Udapudi" }],
 };
@@ -41,9 +41,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#080c14] text-slate-100 antialiased selection:bg-sky-500/25 selection:text-sky-200`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#fafaf9] text-stone-900 antialiased selection:bg-stone-200 selection:text-stone-900`}
       >
         {children}
       </body>

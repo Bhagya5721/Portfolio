@@ -10,13 +10,13 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#080c14] text-slate-100 flex flex-col selection:bg-sky-500/25 selection:text-sky-200">
+    <div className="relative min-h-screen bg-[#fafaf9] text-stone-900 flex flex-col selection:bg-stone-200 selection:text-stone-900">
       <Navbar />
       <main className="flex-1">
         <Hero />
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Experience />
         <Education />
         <Contact />
