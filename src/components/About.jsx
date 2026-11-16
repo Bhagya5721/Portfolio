@@ -1,15 +1,12 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolio.js";
 import { useTheme } from "@/context/ThemeContext.jsx";
-import { motion } from "framer-motion";
 import {
   GraduationCap,
   MapPin,
   Briefcase,
   Code2,
-  CheckCircle2,
   Sparkles,
-  Award,
 } from "lucide-react";
 
 export default function About() {
@@ -33,15 +30,11 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 relative">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+        <div className="text-center mb-12">
+          <div
             className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-3"
             style={{
               backgroundColor: isDark ? "rgba(30, 41, 59, 0.6)" : "rgba(239, 246, 255, 0.8)",
@@ -50,52 +43,32 @@ export default function About() {
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Know Me Better</span>
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          </div>
+          <h2
             className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${
               isDark ? "text-slate-100" : "text-slate-900"
             }`}
           >
             About <span className={isDark ? "gradient-text" : "gradient-text-light"}>Me</span>
-          </motion.h2>
+          </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Profile Photo / Card Placeholder */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-5 flex justify-center"
-          >
-            <div className="relative w-full max-w-sm">
-              {/* Outer Glow Ring */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          {/* Left Column: Profile Card */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="w-full max-w-sm">
               <div
-                className={`absolute -inset-1 rounded-3xl blur-xl opacity-40 transition duration-1000 group-hover:opacity-100 ${
+                className={`rounded-2xl p-7 border transition-colors duration-150 flex flex-col items-center text-center ${
                   isDark
-                    ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600"
-                    : "bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400"
-                }`}
-              />
-
-              {/* Profile Card Container */}
-              <div
-                className={`relative rounded-3xl p-8 border backdrop-blur-xl shadow-2xl flex flex-col items-center text-center ${
-                  isDark
-                    ? "glass-panel-dark bg-slate-900/80 border-slate-800"
-                    : "glass-panel-light bg-white/90 border-slate-200"
+                    ? "bg-slate-900/80 border-slate-800"
+                    : "bg-white border-slate-200 shadow-sm"
                 }`}
               >
                 {/* Avatar Placeholder */}
-                <div className="relative mb-6">
-                  <div className="w-36 h-36 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-600 p-1 shadow-xl shadow-indigo-500/25">
+                <div className="relative mb-5">
+                  <div className="w-32 h-32 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-600 p-0.5">
                     <div
-                      className={`w-full h-full rounded-2xl flex flex-col items-center justify-center font-mono font-bold text-4xl text-white ${
+                      className={`w-full h-full rounded-2xl flex flex-col items-center justify-center font-mono font-bold text-3xl text-white ${
                         isDark ? "bg-slate-950" : "bg-slate-900"
                       }`}
                     >
@@ -105,9 +78,9 @@ export default function About() {
                       </span>
                     </div>
                   </div>
-                  {/* Status Badge */}
-                  <div className="absolute -bottom-2 -right-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500 text-white shadow-md flex items-center gap-1.5 border-2 border-slate-950">
-                    <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                  {/* Status Badge - solid, no pulse */}
+                  <div className="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500 text-white shadow-sm flex items-center gap-1.5 border border-slate-900">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white" />
                     <span>Open to Work</span>
                   </div>
                 </div>
@@ -122,7 +95,7 @@ export default function About() {
                 {/* Micro info pills */}
                 <div className="flex flex-wrap gap-2 justify-center text-xs">
                   <span
-                    className={`px-3 py-1 rounded-lg border font-medium ${
+                    className={`px-2.5 py-1 rounded-md border font-medium ${
                       isDark
                         ? "bg-slate-800/60 text-slate-300 border-slate-700/60"
                         : "bg-slate-100 text-slate-700 border-slate-200"
@@ -131,7 +104,7 @@ export default function About() {
                     Pentagon Space
                   </span>
                   <span
-                    className={`px-3 py-1 rounded-lg border font-medium ${
+                    className={`px-2.5 py-1 rounded-md border font-medium ${
                       isDark
                         ? "bg-slate-800/60 text-slate-300 border-slate-700/60"
                         : "bg-slate-100 text-slate-700 border-slate-200"
@@ -140,7 +113,7 @@ export default function About() {
                     ECE 2026 Grad
                   </span>
                   <span
-                    className={`px-3 py-1 rounded-lg border font-medium ${
+                    className={`px-2.5 py-1 rounded-md border font-medium ${
                       isDark
                         ? "bg-slate-800/60 text-slate-300 border-slate-700/60"
                         : "bg-slate-100 text-slate-700 border-slate-200"
@@ -151,17 +124,11 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Column: Bio + Key Facts */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-7 flex flex-col justify-center"
-          >
-            <h3 className={`text-2xl font-bold mb-4 ${isDark ? "text-slate-100" : "text-slate-900"}`}>
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            <h3 className={`text-2xl font-bold mb-3 ${isDark ? "text-slate-100" : "text-slate-900"}`}>
               Transitioning Analytical Engineering into High-Impact Software Solutions
             </h3>
             
@@ -171,20 +138,20 @@ export default function About() {
             </p>
 
             {/* Key Facts Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {keyFacts.map((fact, index) => (
                 <div
                   key={fact.label || index}
-                  className={`p-4 rounded-2xl border transition-all duration-200 hover:-translate-y-0.5 ${
+                  className={`p-4 rounded-xl border transition-colors duration-150 ${
                     isDark
-                      ? "bg-slate-900/60 border-slate-800/80 hover:border-slate-700 shadow-lg shadow-black/10"
-                      : "bg-white/80 border-slate-200 hover:border-slate-300 shadow-sm"
+                      ? "bg-slate-900/60 border-slate-800 hover:border-slate-700"
+                      : "bg-white border-slate-200 hover:border-slate-300 shadow-sm"
                   }`}
                 >
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-center gap-2.5 mb-2">
                     <div
-                      className={`p-2 rounded-xl ${
-                        isDark ? "bg-slate-800/80" : "bg-slate-100"
+                      className={`p-2 rounded-lg ${
+                        isDark ? "bg-slate-800" : "bg-slate-100"
                       }`}
                     >
                       {getFactIcon(fact.label)}
@@ -204,7 +171,7 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
